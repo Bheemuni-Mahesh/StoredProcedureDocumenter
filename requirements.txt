@@ -1,2 +1,4 @@
 google-genai
 sqlglot
+pytest
+python-dotenv
