@@ -1,0 +1,5 @@
+CREATE PROCEDURE GetSalary
+AS
+BEGIN
+    SELECT Salary FROM Employees
+END
