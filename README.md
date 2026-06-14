@@ -9,7 +9,7 @@
 | Name | Roll Number |
 |---|---|
 | Bheemuni Mahesh | 23U41A0508 |
-| Murapaka Venkata Daya | 24U5A0233 |
+| Murapaka Venkata Daya | 24U45A0233 |
 | Nammi Lokesh | 24U45A0421 |
 | Donkada Yamini | 23U41A4218 |
 
