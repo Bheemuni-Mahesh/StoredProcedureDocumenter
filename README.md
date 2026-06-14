@@ -262,7 +262,7 @@ Expected output:
 
 [Click here to watch the demo video](#)
 
-> *(Replace # with your YouTube or Google Drive link after recording)*
+> https://drive.google.com/file/d/1MdaQRFNHVW901Cxhipkc5D1h28aiXirk/view?usp=drivesdk
 
 ---
 
