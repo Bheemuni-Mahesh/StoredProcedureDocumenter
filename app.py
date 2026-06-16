@@ -202,7 +202,7 @@ Raw SQL:
 """
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash-lite",
+        model="gemini-2.5-flash",
         contents=prompt
     )
     return response.text
@@ -250,11 +250,12 @@ if run and uploaded_files:
         st.error("⚠️ Please enter your Gemini API key in the sidebar!")
         st.stop()
 
+
     try:
-        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+      client = genai.Client(api_key=api_key)
     except Exception as e:
-        st.error(f"Failed to connect to Gemini: {e}")
-        st.stop()
+      st.error(f"Failed to connect to Gemini: {e}")
+      st.stop()
 
     st.markdown("---")
     st.markdown("### 🔄 Processing Files...")
