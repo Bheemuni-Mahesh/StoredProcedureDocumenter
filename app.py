@@ -201,12 +201,38 @@ Raw SQL:
 {sql_code}
 """
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
-    return response.text
+        # Retry logic
+    max_retries = 3
 
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
+            )
+            return response.text
+
+        except Exception as e:
+            error_msg = str(e)
+
+            if "503" in error_msg or "UNAVAILABLE" in error_msg:
+                if attempt < max_retries - 1:
+                    wait_time = 10 * (attempt + 1)
+
+                    st.warning(
+                        f"Gemini is experiencing high demand. "
+                        f"Retrying in {wait_time} seconds..."
+                    )
+
+                    time.sleep(wait_time)
+
+                else:
+                    raise Exception(
+                        "Gemini service is currently overloaded. "
+                        "Please try again after a few minutes."
+                    )
+            else:
+                raise
 # ---------------------------
 # MAIN UI
 # ---------------------------
