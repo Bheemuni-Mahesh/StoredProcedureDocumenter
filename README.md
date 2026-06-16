@@ -262,9 +262,26 @@ Expected output:
 
 [Click here to watch the demo video](#)
 
-> https://drive.google.com/file/d/1MdaQRFNHVW901Cxhipkc5D1h28aiXirk/view?usp=drivesdk
+> https://drive.google.com/file/d/1NkRgi5t9yNFqer7oqvSighRopM114OY2/view?usp=drivesdk
 
 ---
+
+## 🌐 Live Demo
+
+Try the deployed application here:
+
+**Live App:** https://sql-procedure-documenter.streamlit.app/
+
+### What You Can Do
+
+* Upload one or more SQL stored procedure files
+* Analyze procedure structure using Code-Walking RAG
+* Generate AI-powered Markdown documentation
+* Preview generated documentation in the browser
+* Download documentation files instantly
+
+No installation required — runs directly in the browser.
+
 
 ## 📦 Requirements
 
